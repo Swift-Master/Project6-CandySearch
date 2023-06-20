@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CandySearch.gif">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "MyProject">
+      <FileRef
+         location = "group:Project6-CandySearch/Project6-CandySearch.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "ReferenceProject">
+      <FileRef
+         location = "group:Reference/CandySearch.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
