@@ -15,6 +15,7 @@
 		6E25AA7C2A41CA2B00001221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E25AA7A2A41CA2B00001221 /* LaunchScreen.storyboard */; };
 		6E25AA842A435FBC00001221 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E25AA832A435FBC00001221 /* Candy.swift */; };
 		6E25AA862A43626500001221 /* candies.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E25AA852A43626500001221 /* candies.json */; };
+		6EC57FDF2A4E1EEB009276CE /* CandyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57FDE2A4E1EEB009276CE /* CandyDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6E25AA7D2A41CA2B00001221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E25AA832A435FBC00001221 /* Candy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 		6E25AA852A43626500001221 /* candies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = candies.json; sourceTree = "<group>"; };
+		6EC57FDE2A4E1EEB009276CE /* CandyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				6E25AA732A41CA2A00001221 /* CandyListViewController.swift */,
+				6EC57FDE2A4E1EEB009276CE /* CandyDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E25AA742A41CA2A00001221 /* CandyListViewController.swift in Sources */,
+				6EC57FDF2A4E1EEB009276CE /* CandyDetailViewController.swift in Sources */,
 				6E25AA842A435FBC00001221 /* Candy.swift in Sources */,
 				6E25AA702A41CA2A00001221 /* AppDelegate.swift in Sources */,
 				6E25AA722A41CA2A00001221 /* SceneDelegate.swift in Sources */,

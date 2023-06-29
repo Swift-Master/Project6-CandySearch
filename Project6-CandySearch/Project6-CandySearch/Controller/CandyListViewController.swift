@@ -64,6 +64,17 @@ class CandyListViewController: UIViewController {
 //        candySearchBar.searchBar.showsScopeBar = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "candySelected" {
+                let datas = isSearched ? searchResult : dataModel
+                guard let candies = datas, let nextVC =  segue.destination as? CandyDetailViewController, let currentRow = sender as? Int else{
+                    return
+                }
+                nextVC.candyName = candies[currentRow].name
+            }
+        }
+    
+    
 }
 
 extension CandyListViewController : UITableViewDataSource {
@@ -90,6 +101,12 @@ extension CandyListViewController : UITableViewDataSource {
         return cell
     }
     
+}
+
+extension CandyListViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "candySelected", sender: indexPath.row)
+    }
 }
 
 extension CandyListViewController : UISearchResultsUpdating {
