@@ -4,16 +4,7 @@ import UIKit
 class CandyListViewController: UIViewController {
     
     var dataModel : [Candy]?
-    
     var searchResult : [Candy]?
-    
-    var isSearched : Bool {
-        let searchController = self.navigationItem.searchController
-        let isActive = searchController?.isActive ?? false
-
-        return isActive
-    }
-    
     var candySearchBar = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var candyTableView: UITableView!
@@ -26,6 +17,11 @@ class CandyListViewController: UIViewController {
     
     func setNavigationBar() {
         let navigationAppearance = UINavigationBarAppearance()
+        let titleImageVIew = {
+            let imageView = UIImageView(image: UIImage(named: "Inline-Logo"))
+            imageView.contentMode = .scaleAspectFit
+            return imageView
+        }()
         navigationAppearance.backgroundColor = .systemGreen
         navigationAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
         navigationController?.navigationBar.standardAppearance = navigationAppearance
@@ -34,10 +30,10 @@ class CandyListViewController: UIViewController {
         navigationController?.navigationBar.compactScrollEdgeAppearance = navigationAppearance
         navigationController?.setNeedsStatusBarAppearanceUpdate()
         self.navigationItem.searchController = candySearchBar
+        self.navigationItem.titleView = titleImageVIew
         
         // MARK: - 스크롤 시 서치 바를 숨깁니다(기본적으로 숨김)
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        title = "Candy Search"
     }
     
     func getDataModel() {
@@ -66,11 +62,11 @@ class CandyListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "candySelected" {
-                let datas = isSearched ? searchResult : dataModel
+                let datas = candySearchBar.isActive ? searchResult : dataModel
                 guard let candies = datas, let nextVC =  segue.destination as? CandyDetailViewController, let currentRow = sender as? Int else{
                     return
                 }
-                nextVC.candyName = candies[currentRow].name
+                nextVC.currentCandy = candies[currentRow]
             }
         }
     
@@ -79,7 +75,7 @@ class CandyListViewController: UIViewController {
 
 extension CandyListViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let datas = isSearched ? searchResult : dataModel
+        let datas = candySearchBar.isActive ? searchResult : dataModel
         guard let candies = datas else {
             fatalError("Row 개수 계산 중 오류 발생")
         }
@@ -88,7 +84,7 @@ extension CandyListViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let datas = isSearched ? searchResult : dataModel
+        let datas = candySearchBar.isActive ? searchResult : dataModel
         guard let candies = datas else {
             fatalError("셀 설정 중 오류 발생")
         }
