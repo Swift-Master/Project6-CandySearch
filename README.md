@@ -1,36 +1,20 @@
-## 프로젝트 번호 : 프로젝트 이름
+## 프로젝트 6 : CandySearch
 
-간략한 설명
+##  날짜별 구현 사항
 
-이 앱의 레퍼런스는 [soapyigu의 Swift-30-Projects](https://github.com/soapyigu/Swift-30-Projects)입니다.
 
-기본 기능을 모두 구현했다면, 디자인 및 추가 기능 구현은 자유롭게 해주세요.
+### 2023.06.20.
+- [네비게이션 바 및 상태바 설정](https://github.com/AKAPUCH/Project6-CandySearch/commit/50b9810099946b55f2490137b833404aaf9ce2c0)
 
-## 가이드
+### 2023.06.22.
+- [데이터 모델 파일 추가 및 테이블 뷰 구현](https://github.com/AKAPUCH/Project6-CandySearch/commit/de47de80d5570c70f079bc2a585cc01917e5177c)
 
-영상 가이드는 [코드스쿼드 pr연습](https://www.youtube.com/watch?v=lFinZfu3QO0)을 참조해주세요.
-
-1. 본인 이름으로 브랜치(ex: PAKA)를 생성한 후, 자신의 레포로 fork해주세요.
-
-2. fork 한 레포에서 기능 또는 화면 단위로 새 브랜치(ex: pr1)를 생성 후 작업 및 커밋합니다. 
-
-3. 커밋했던 브랜치(pr1)에서 자신의 이름 브랜치(PAKA)로 PR을 올려주세요.
-
-4. 코드 리뷰를 받고 모든 수정사항을 반영한 후 `squash and merge` 옵션으로 자신의 브랜치에 merge해주세요.
-
-5. merge했던 브랜치(pr1)에서 fork한 레포의 main 브랜치로 checkout후 해당 브랜치(pr1)를 삭제합니다.
-
-6. 다음 명령어들을 순차적으로 실행합니다.
-
-```
-    git remote add upstream https://github.com/Swift-Master/Project1-GoodAsOldPhones
-    
-    git fetch upstream `본인의 브랜치명(ex:PAKA)`
-    
-    git rebase upstream `upstream/본인의브랜치명(ex:PAKA)`
-```
-
-7. 2번으로 돌아가 새로운 작업을 반복합니다.
+### 2023.06.30.
+- [검색 기능 구현](https://github.com/AKAPUCH/Project6-CandySearch/commit/e81562f27c36047196f89cb7f1054b8be84afa3e)
+- [화면전환 및 디테일 뷰 구현](https://github.com/AKAPUCH/Project6-CandySearch/commit/20cec39b19b30786c67b7ea908f120d951aa0a85)
+- [타이틀 이미지로 변경 및 카테고리 라벨 추가](https://github.com/AKAPUCH/Project6-CandySearch/commit/2892619514f0ed79c9042d938d50b297d122118f)
+- [코드 정리 및 주석 추가](https://github.com/AKAPUCH/Project6-CandySearch/commit/49533197f36a336ae1560933219e8c64afe96b8c)
 
 ## 실제 화면
-![시뮬레이터화면](./이미지이름.gif)
+
+![시뮬레이터화면](./project6.gif)

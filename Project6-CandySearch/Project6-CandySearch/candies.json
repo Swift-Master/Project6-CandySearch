@@ -1,0 +1,38 @@
+[
+    {
+        "category" : "Chocolate",
+        "name" : "Chocolate Bar"
+    },
+    {
+        "category" : "Chocolate",
+        "name" : "Chocolate Chip"
+    },
+    {
+        "category" : "Chocolate",
+        "name" : "Dark Chocolate"
+    },
+    {
+        "category" : "Hard",
+        "name" : "Lollipop"
+    },
+    {
+        "category" : "Hard",
+        "name" : "Candy Cane"
+    },
+    {
+        "category" : "Hard",
+        "name" : "Jaw Breaker"
+    },
+    {
+        "category" : "Other",
+        "name" : "Caramel"
+    },
+    {
+        "category" : "Other",
+        "name" : "Sour Chew"
+    },
+    {
+        "category" : "Other",
+        "name" : "Gummi Bear"
+    }
+]
